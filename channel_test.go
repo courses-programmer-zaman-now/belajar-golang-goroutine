@@ -71,3 +71,23 @@ func TestInOutChannel(t *testing.T) {
 
 	time.Sleep(5 * time.Second)
 }
+
+// belajar buffered channel
+func TestBufferedChannel(t *testing.T) {
+	// buffered : kapasitas menampung data dalam satu channel
+	channel := make(chan string, 3)
+	defer close(channel)
+
+	channel <- "danil"
+	channel <- "syah"
+	channel <- "ari"
+
+	fmt.Println(<-channel)
+	fmt.Println(<-channel)
+	// fmt.Println(<-channel)
+
+	fmt.Println(cap(channel))
+	fmt.Println(len(channel))
+
+	fmt.Println("Selesai")
+}
