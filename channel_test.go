@@ -125,7 +125,7 @@ func TestSelectChannel(t *testing.T) {
 	for {
 		select {
 		case data := <-channel1:
-			fmt.Println("Data dari channel 1 ", data)
+			fmt.Println("Data dari channell 1 ", data)
 			counter++
 		case data := <-channel2:
 			fmt.Println("Dataa dari channel 2 ", data)
