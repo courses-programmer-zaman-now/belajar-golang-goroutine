@@ -18,7 +18,7 @@ func TestCreateGoroutine(t *testing.T) {
 }
 
 func DisplayNumber(number int) {
-	fmt.Println("Display", number)
+	fmt.Println("Display : ", number)
 }
 
 func TestManyGoroutine(t *testing.T) {
